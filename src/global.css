@@ -1,0 +1,11 @@
+/* global.css */
+.app-container {
+  transform: scale(1.0); /* Zoom in by 5% */
+  transform-origin: top left; /* Scale from the top-left corner */
+  width: 100%; /* Ensure the scaling doesn't affect layout width */
+  height: 100%; /* Ensure the scaling doesn't affect layout height */
+}
+
+html, body {
+  overflow-x: hidden; /* Prevent horizontal overflow when scaling */
+}
