@@ -6,20 +6,20 @@ import { useNavigate } from 'react-router-dom';
 
 const productsData = {
   "Phones & Tablets": [
-    { id: 1, name: "iPhone 12", price: "$799", image: "/iphone12.jpg" },
-    { id: 2, name: "Samsung Galaxy S21", price: "$699", image: "/samsung.jpg" },
+    { id: 1, name: "iPhone 12", price: "₦639,200", image: "/iphone12.jpg" }, // $799 * 800 = ₦639,200
+    { id: 2, name: "Samsung Galaxy S21", price: "₦559,200", image: "/samsung.jpg" }, // $699 * 800 = ₦559,200
   ],
   Fashion: [
-    { id: 3, name: "Men's Dress", price: "$49", image: "/jacket.png" },
-    { id: 4, name: "Women's Dress", price: "$59", image: "/dress.png" },
+    { id: 3, name: "Men's Dress", price: "₦39,200", image: "/jacket.png" }, // $49 * 800 = ₦39,200
+    { id: 4, name: "Women's Dress", price: "₦47,200", image: "/dress.png" }, // $59 * 800 = ₦47,200
   ],
   Electronics: [
-    { id: 5, name: "Sony TV", price: "$999", image: "/tv.png" },
-    { id: 6, name: "Dell Laptop", price: "$799", image: "/laptop.png" },
+    { id: 5, name: "Sony TV", price: "₦799,200", image: "/tv.png" }, // $999 * 800 = ₦799,200
+    { id: 6, name: "Dell Laptop", price: "₦639,200", image: "/laptop.png" }, // $799 * 800 = ₦639,200
   ],
   Gaming: [
-    { id: 7, name: "PlayStation 5", price: "$499", image: "/ps5.jpg" },
-    { id: 8, name: "Xbox Series X", price: "$499", image: "/xbox.jpg" },
+    { id: 7, name: "PlayStation 5", price: "₦399,200", image: "/ps5.jpg" }, // $499 * 800 = ₦399,200
+    { id: 8, name: "Xbox Series X", price: "₦399,200", image: "/xbox.jpg" }, // $499 * 800 = ₦399,200
   ],
 };
 
@@ -28,7 +28,7 @@ const CategoryPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [wishlist, setWishlist] = useState(JSON.parse(localStorage.getItem("wishlist")) || []);
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
-  const navigate = useNavigate();  // Call useNavigate inside the component
+  const navigate = useNavigate();
 
   useEffect(() => {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
