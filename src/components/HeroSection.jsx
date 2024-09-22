@@ -61,7 +61,6 @@ function HeroSection() {
             _hover={{ bg: 'yellow.500', transform: 'scale(1.05)', transition: '0.3s', boxShadow: 'md' }}
             transition="0.3s"
             animate={{ opacity: [0, 1], y: [-10, 0] }}
-            transition={{ duration: 1, delay: 1 }}
             onClick={() => navigate("/collections")}  // Navigate to collections on click
           >
             Start Shopping
