@@ -4,8 +4,8 @@ import { FaYoutube, FaInstagram, FaFacebook, FaTwitter, FaTiktok } from "react-i
 
 const Footer = () => {
   return (
-    <Box as="footer" bg="blue" color="white" p={20} w="100%" position="relative">
-      <VStack align="flex-start" spacing={6}>
+    <Box as="footer" bg="blue" color="white" p={15} w="100%" position="relative">
+      <VStack align="flex-start" spacing={5}>
         {/* About */}
         <Box>
           <Text fontSize="lg" fontWeight="bold">About Calmpus</Text>
@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <Box>
           <Text fontSize="lg" fontWeight="bold">Follow Us</Text>
-          <HStack spacing={4} mt={2}>
+          <HStack spacing={2} mt={1}>
             <IconButton as="a" href="https://youtube.com" target="_blank" aria-label="YouTube" icon={<FaYoutube />} size="lg" bg="black" color="white" />
             <IconButton as="a" href="https://instagram.com" target="_blank" aria-label="Instagram" icon={<FaInstagram />} size="lg" bg="black" color="white" />
             <IconButton as="a" href="https://facebook.com" target="_blank" aria-label="Facebook" icon={<FaFacebook />} size="lg" bg="black" color="white" />
