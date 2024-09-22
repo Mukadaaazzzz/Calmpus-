@@ -4,7 +4,7 @@ import { FaYoutube, FaInstagram, FaFacebook, FaTwitter, FaTiktok } from "react-i
 
 const Footer = () => {
   return (
-    <Box as="footer" bg="blue" color="white" p={15} w="100%" position="relative">
+    <Box as="footer" bg="blue" color="white" p={15} w="100%" position="relative" paddingBottom="85px">
       <VStack align="flex-start" spacing={5}>
         {/* About */}
         <Box>
