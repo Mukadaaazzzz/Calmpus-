@@ -100,7 +100,8 @@ const CategoryPage = () => {
           </Select>
         </Box>
 
-        <Grid templateColumns="repeat(auto-fill, minmax(180px, 1fr))" gap={6}>
+       <Grid templateColumns="repeat(auto-fill, minmax(12rem, 1fr))" gap={6}>
+
           {filteredProducts.map((product) => (
             <Box key={product.id} bg="white" p={4} borderRadius="md" boxShadow="md">
               <Image src={product.image} alt={product.name} mb={4} />
