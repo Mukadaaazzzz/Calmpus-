@@ -36,8 +36,8 @@ function HeroSection() {
         <Box flex="1" mb={{ base: 10, md: 0 }} textAlign={{ base: 'center', md: 'left' }}>
           <MotionHeading
             size="xl"  // Reduced heading size
-            mb={5}
-            fontWeight="extrabold"
+            mb={4}
+            fontWeight="bold"
             letterSpacing="tight"
             animate={{ opacity: [0, 1], y: [-20, 0] }}
             transition={{ duration: 1 }}

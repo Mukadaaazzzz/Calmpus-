@@ -9,7 +9,7 @@ const Footer = () => {
         {/* About */}
         <Box>
           <Text fontSize="lg" fontWeight="bold">About Calmpus</Text>
-          <Text mt={3}>
+          <Text mt={2}>
             Calmpus is your trusted online marketplace for students, offering the best deals in electronics, fashion, health, beauty, and more. Fast delivery, great prices, and reliable customer service.
           </Text>
         </Box>
