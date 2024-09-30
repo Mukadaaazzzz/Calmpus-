@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button, Text, Grid, Image, VStack, HStack, Icon, Divider } from "@chakra-ui/react";
-import { FaWhatsapp } from "react-icons/fa";
+import { Box, Button, Text, Grid, Image } from "@chakra-ui/react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
-  const navigate = useNavigate(); // useNavigate() should be used inside the component
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(storedCart);
 
     // Calculate total price
-    const calculatedTotal = storedCart.reduce(
-      (sum, item) => sum + parseFloat(item.price.replace("$", "")) * item.quantity,
-      0
-    );
+    const calculatedTotal = storedCart.reduce((sum, item) => {
+      const price = parseFloat(item.price.replace(/[^0-9.-]+/g, "")) * item.quantity;
+      return sum + price;
+    }, 0);
+    
     setTotal(calculatedTotal);
   }, []);
 
   const handlePayment = () => {
-    // Simulate payment process and clear the cart
     alert("Please send payment evidence on WhatsApp after transfer.");
     localStorage.removeItem("cart");
     navigate("/thank-you");
@@ -31,8 +30,7 @@ const CheckoutPage = () => {
   return (
     <>
       <Header />
-      <Box p={4} bg="gray.50" minH="100vh"
-       paddingBottom="85px">
+      <Box p={4} bg="gray.50" minH="100vh" paddingBottom="85px">
         <Text fontSize="2xl" mb={6} fontWeight="bold">Checkout</Text>
 
         {cartItems.length > 0 ? (
@@ -54,11 +52,8 @@ const CheckoutPage = () => {
 
         {/* Total Price */}
         <Box mt={8} p={4} bg="white" boxShadow="md" borderRadius="md">
-          <Text fontSize="xl" fontWeight="bold">Total: ${total.toFixed(2)}</Text>
+          <Text fontSize="xl" fontWeight="bold">Total: ₦{total.toFixed(2)}</Text>
         </Box>
-
-        {/* Payment Instructions */}
-        
 
         {/* Confirm Button */}
         <Box mt={8} textAlign="center">

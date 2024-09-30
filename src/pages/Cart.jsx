@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  const navigate = useNavigate(); // Add navigate hook
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -28,7 +28,12 @@ const Cart = () => {
   };
 
   const calculateTotalPrice = () => {
-    return cart.reduce((total, item) => total + parseFloat(item.price.slice(1)) * item.quantity, 0).toFixed(2);
+    return cart
+      .reduce((total, item) => {
+        const price = parseFloat(item.price.replace(/[^0-9.-]+/g, "")); // Extract numeric value from price
+        return total + price * item.quantity;
+      }, 0)
+      .toFixed(2);
   };
 
   const handleProceedToCheckout = () => {
@@ -68,7 +73,7 @@ const Cart = () => {
         </Grid>
         {cart.length > 0 && (
           <Box mt={4}>
-            <Text fontWeight="bold">Total: ${calculateTotalPrice()}</Text>
+            <Text fontWeight="bold">Total: NGN{calculateTotalPrice()}</Text>
             <Button colorScheme="green" mt={2} onClick={handleProceedToCheckout}>
               Proceed to Checkout
             </Button>
