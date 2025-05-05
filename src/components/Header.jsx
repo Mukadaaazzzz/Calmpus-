@@ -23,7 +23,7 @@ function Header() {
       <Image
         src="/calm.png"
         alt="Calmpus Logo"
-        boxSize={{ base: '120px', md: '140px' }} // Adjust logo size for responsiveness
+        boxSize={{ base: '100px', md: '120px' }} // Adjust logo size for responsiveness
         onClick={() => navigate("/")}
         cursor="pointer"
       />

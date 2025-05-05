@@ -36,7 +36,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <Box textAlign="center" w="100%">
-          <Text>© 2024 Calmpus. Made in Mukadaz Labs.</Text>
+          <Text>© 2025 Calmpus. Made in Mukadaz Labs.</Text>
         </Box>
       </VStack>
     </Box>

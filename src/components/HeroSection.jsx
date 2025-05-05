@@ -15,7 +15,7 @@ const MotionText = motion(Text);
 const MotionButton = motion(Button);
 
 const bgImage =
-  '/calmu.jpg';
+  '/xca.jpg';
 
 function HeroSection() {
   const navigate = useNavigate();
@@ -119,22 +119,7 @@ function HeroSection() {
       </Flex>
 
       {/* 🔹 Scroll indicator */}
-      <MotionBox
-        position="absolute"
-        bottom="5%"
-        left="50%"
-        transform="translateX(-50%)"
-        w={8}
-        h={14}
-        border="2px"
-        borderColor="whiteAlpha.600"
-        borderRadius="full"
-        zIndex={2}
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5 }}
-      >
-        <Box w={2} h={2} bg="white" borderRadius="full" mx="auto" mt={2} />
-      </MotionBox>
+     
     </MotionBox>
   );
 }
