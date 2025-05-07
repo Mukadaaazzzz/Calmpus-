@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
       {/* Content */}
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
         <VStack spacing={4}>
-          <Icon as={FaTruck} w={16} h={16} color="blue.500" />
+          <Icon as={FaTruck} w={16} h={16} role="img" color="blue.500 " />
           <Heading as="h3" size="md">
             Fast Delivery
           </Heading>
@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
         </VStack>
 
         <VStack spacing={4}>
-          <Icon as={FaShieldAlt} w={16} h={16} color="blue.500" />
+          <Icon as={FaShieldAlt} w={16} h={16} role="img" color="blue.500" />
           <Heading as="h3" size="md">
             Secure Payments
           </Heading>
@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
         </VStack>
 
         <VStack spacing={4}>
-          <Icon as={FaDollarSign} w={16} h={16} color="blue.500" />
+          <Icon as={FaDollarSign} w={16} h={16} role="img" color="blue.500" />
           <Heading as="h3" size="md">
             Affordable Prices
           </Heading>
@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
         </VStack>
 
         <VStack spacing={4}>
-          <Icon as={FaAward} w={16} h={16} color="blue.500" />
+          <Icon as={FaAward} w={16} h={16} role="img" color="blue.500" />
           <Heading as="h3" size="md">
             Quality Products
           </Heading>

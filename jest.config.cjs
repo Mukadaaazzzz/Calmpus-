@@ -1,8 +1,7 @@
-const {defaults} = require('jest-config');
-
-/** @type {import('jest').Config} */
-const config = {
-  moduleFileExtensions: [...defaults.moduleFileExtensions, 'mts', 'cts'],
+module.exports = {
+  transform: {
+    '^.+\\.[jt]sx?$': 'babel-jest',
+  },
+  moduleFileExtensions: ['js', 'jsx'],
+  testEnvironment: 'jsdom',
 };
-
-module.exports = config;
